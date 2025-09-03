@@ -1,4 +1,7 @@
-# Todo-List-App
-A Flutter Todo List app that utilizes MVVM architecture and Riverpod for state management and offers full CRUD functionality
+# <p align="center"> Todo-List-App </p>
+A Flutter Todo List app that utilizes MVVM architecture and Riverpod for state management and offers full CRUD functionality.
 
-<img src="preview.png">
+## App Preview
+<img src="preview.png" align="center">
+
+--- 
