@@ -9,7 +9,8 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(),
-      body: Center(child: Text("Home Page"),),
+      body: MyBody(),
+      floatingActionButton: MyFCB(),
     );
   }
 } 

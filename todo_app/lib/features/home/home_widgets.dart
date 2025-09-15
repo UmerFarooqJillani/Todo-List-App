@@ -16,7 +16,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         Row(
           children: [
             IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-            Switch(value: isdark, onChanged: (value) {}, ),
+            Switch(value: isdark, onChanged: (value) {}),
           ],
         ),
       ],
@@ -25,4 +25,22 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
+}
+
+class MyBody extends StatelessWidget {
+  const MyBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: Text("Center"));
+  }
+}
+
+class MyFCB extends StatelessWidget {
+  const MyFCB({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return FloatingActionButton(onPressed: () {}, child: Icon(Icons.add));
+  }
 }
