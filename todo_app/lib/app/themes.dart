@@ -8,8 +8,16 @@ class MyThemes {
     scaffoldBackgroundColor: Colors.white,
     primaryColor: Colors.white,
 
-    appBarTheme: AppBarTheme(),
-    textTheme: const TextTheme(),
+    appBarTheme: AppBarTheme(
+      backgroundColor: const Color.fromRGBO(10, 182, 171, 100),
+      foregroundColor: Colors.white, // icons/text
+      elevation: 0,
+    ),
+
+    textTheme: const TextTheme(
+      titleLarge: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+    ),
+
     floatingActionButtonTheme: FloatingActionButtonThemeData(),
   );
 
