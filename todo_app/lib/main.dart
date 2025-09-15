@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:todo_app/app/routes.dart';
+import 'package:todo_app/app/themes.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +24,11 @@ class App extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          // theme: ,
+          
+          theme: MyThemes.lightTheme,
+          darkTheme: MyThemes.darkTheme,
+          themeMode: ThemeMode.system,
+
           initialRoute: "/",
           routes: AppRoutes.myRoutes,
           onUnknownRoute: (settings) => MaterialPageRoute(
