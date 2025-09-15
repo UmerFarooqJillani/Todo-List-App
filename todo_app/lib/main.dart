@@ -2,25 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
-  runApp(ProviderScope(child: MyApp()));
+import 'package:todo_app/app/routes.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const ProviderScope(child: App()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
+      designSize: const Size(360, 690), // width, height
       minTextAdapt: true,
       splitScreenMode: true,
-      // Use `child` for performance; pass your root screen here
+      // Use `child` for performance, pass your root screen here
       // child: const HomeScreen(),
       builder: (context, child) {
         return MaterialApp(
-          // Keep MVVM routing here if needed
-          home: child, // ← uses the `HomeScreen` above
-
+          debugShowCheckedModeBanner: false,
+          // theme: ,
+          initialRoute: "/",
+          routes: AppRoutes.myRoutes,
+          onUnknownRoute: (settings) => MaterialPageRoute(
+            // fallback if a wrong route is opened.
+            builder: (_) =>
+                const Scaffold(body: Center(child: Text("Route not found"))),
+          ),
         );
       },
     );
