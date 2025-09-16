@@ -25,9 +25,7 @@ class MyThemes {
       ),
       toolbarTextStyle: TextStyle(color: Colors.white),
       toolbarHeight: 64.0,
-      actionsIconTheme: IconThemeData(
-        color: Colors.black
-      ),
+      actionsIconTheme: IconThemeData(color: Colors.white, size: 30),
     ),
 
     textTheme: const TextTheme(
