@@ -11,12 +11,19 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: const Color.fromRGBO(10, 182, 171, 100),
+      // foregroundColor: Colors.amber,
       title: Text(appTitle, style: Theme.of(context).textTheme.titleLarge),
+      centerTitle: false,
       actions: [
         Row(
           children: [
             IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-            Switch(value: isdark, onChanged: (value) {}),
+            SizedBox(
+              height: 60,
+              width: 60,
+              child: Switch(value: isdark, onChanged: (value) {}),
+            ),
           ],
         ),
       ],
