@@ -11,19 +11,12 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: const Color.fromRGBO(10, 182, 171, 100),
-      // foregroundColor: Colors.amber,
-      title: Text(appTitle, style: Theme.of(context).textTheme.titleLarge),
-      centerTitle: false,
+      title: Text(appTitle),
       actions: [
         Row(
           children: [
             IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-            SizedBox(
-              height: 60,
-              width: 60,
-              child: Switch(value: isdark, onChanged: (value) {}),
-            ),
+            Switch(value: isdark, onChanged: (value) {}),
           ],
         ),
       ],
@@ -31,7 +24,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(64.0);
 }
 
 class MyBody extends StatelessWidget {

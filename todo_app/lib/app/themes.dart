@@ -5,13 +5,29 @@ class MyThemes {
   static final lightTheme = ThemeData(
     useMaterial3: true,
     brightness: Brightness.light,
+    // Prefer ColorScheme in M3:
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: const Color(0xFF0AB6AB),
+      brightness: Brightness.light,
+    ),
     scaffoldBackgroundColor: Colors.white,
-    primaryColor: Colors.white,
 
-    appBarTheme: AppBarTheme(
-      backgroundColor: const Color.fromRGBO(10, 182, 171, 100),
-      foregroundColor: Colors.white, // icons/text
-      elevation: 0,
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color(0xFF0AB6AB),
+      foregroundColor: Colors.white, // icons & text
+      elevation: 60.0,
+      surfaceTintColor: Colors.transparent, // ← important in M3
+      // AppBar uses these over textTheme:
+      titleTextStyle: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+        color: Colors.white,
+      ),
+      toolbarTextStyle: TextStyle(color: Colors.white),
+      toolbarHeight: 64.0,
+      actionsIconTheme: IconThemeData(
+        color: Colors.black
+      ),
     ),
 
     textTheme: const TextTheme(
@@ -22,8 +38,14 @@ class MyThemes {
   );
 
   // dark theme data
-  static final darkTheme = ThemeData(
-    useMaterial3: true,
-    brightness: Brightness.dark,
-  );
+  // static final darkTheme = ThemeData(
+  //   useMaterial3: true,
+  //   brightness: Brightness.dark,
+
+  //   appBarTheme: AppBarTheme(
+  //     backgroundColor: Colors.amberAccent,
+  //     foregroundColor: Colors.white, // icons/text
+  //     elevation: 0,
+  //   ),
+  // );
 }
