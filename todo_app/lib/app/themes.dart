@@ -34,16 +34,4 @@ class MyThemes {
 
     floatingActionButtonTheme: FloatingActionButtonThemeData(),
   );
-
-  // dark theme data
-  // static final darkTheme = ThemeData(
-  //   useMaterial3: true,
-  //   brightness: Brightness.dark,
-
-  //   appBarTheme: AppBarTheme(
-  //     backgroundColor: Colors.amberAccent,
-  //     foregroundColor: Colors.white, // icons/text
-  //     elevation: 0,
-  //   ),
-  // );
 }
