@@ -24,7 +24,7 @@ class App extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          
+
           theme: MyThemes.lightTheme,
 
           initialRoute: "/",
