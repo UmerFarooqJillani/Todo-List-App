@@ -9,8 +9,8 @@ class Todo {
     required this.id,
     required this.title,
     required this.description,
-    required this.createdAt,
     this.isDone = false,
+    required this.createdAt,
   });
 
   Todo copyWith({String? title, String? description, bool? isDone}) => Todo(
