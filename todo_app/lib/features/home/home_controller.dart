@@ -101,9 +101,11 @@ class GroupedTodosNotifier extends Notifier<List<GroupSection>> {
     // yesterday.sort(byNewest);
     // older.sort(byNewest);
 
-    final sections = <GroupSection>[];
+    // final sections = <GroupSection>[];
+    List<GroupSection> sections = [];
     if (today.isNotEmpty) {
-      sections.add(GroupSection(title: 'Today', items: today));
+      // sections.add(GroupSection(title: 'Today', items: today));
+      sections = [GroupSection(title: 'Today', items: today), ...sections];
     }
     if (yesterday.isNotEmpty) {
       sections.add(GroupSection(title: 'Yesterday', items: yesterday));
