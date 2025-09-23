@@ -1,12 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_app/models/todo_model.dart';
 
-// NotifierProvider using Riverpod 2.0 API
 final todoProvider = NotifierProvider<TodoNotifier, List<Todo>>(() {
   return TodoNotifier();
 });
 
-// Notifier class that manages the List<Todo>
 class TodoNotifier extends Notifier<List<Todo>> {
   @override
   List<Todo> build() {
@@ -62,3 +60,4 @@ class TodoNotifier extends Notifier<List<Todo>> {
     }).toList();
   }
 }
+// --------------------------------------------------------------
